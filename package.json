@@ -12,6 +12,9 @@
     "expo": "^30.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-gifted-chat": "^0.4.3"
+    "react-native-gifted-chat": "^0.4.3",
+    "react-native-maps": "latest",
+    "prop-types": "latest",
+    "react-native-nav": "latest"
   }
 }
