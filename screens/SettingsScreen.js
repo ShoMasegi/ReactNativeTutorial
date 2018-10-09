@@ -10,7 +10,11 @@ import {
 export default class SettingsScreen extends React.Component {
 
     static navigationOptions = {
-        title: 'Settings',
+        title: '設定',
+        headerStyle: {
+            backgroundColor: '#1BABC1'
+        },
+        headerTintColor: '#fff'
     }
 
     render() {

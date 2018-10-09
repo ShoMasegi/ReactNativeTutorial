@@ -10,7 +10,11 @@ import {
 export default class MatchingScreen extends React.Component {
 
     static navigationOptions = {
-        title: 'Matching',
+        title: 'マッチング',
+        headerStyle: {
+            backgroundColor: '#1BABC1'
+        },
+        headerTintColor: '#fff'
     }
 
     render() {
