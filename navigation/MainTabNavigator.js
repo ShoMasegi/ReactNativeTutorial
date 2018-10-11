@@ -2,10 +2,10 @@ import React from 'react'
 import { Platform } from 'react-native'
 import { createStackNavigator, createBottomTabNavigator } from "react-navigation"
 
-import TabBarIcon from '../components/TabBarIcon'
-import ConnectScreen from '../screens/ConnectScreen'
-import MatchingScreen from '../screens/MatchingScreen'
-import SettingsScreen from '../screens/SettingsScreen'
+import TabBarIcon from '../views/components/TabBarIcon'
+import ConnectScreen from '../views/screens/ConnectScreen'
+import MatchingScreen from '../views/screens/MatchingScreen'
+import SettingsScreen from '../views/screens/SettingsScreen'
 
 const ConnectStack = createStackNavigator({
     Connect: ConnectScreen,

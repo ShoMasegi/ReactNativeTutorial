@@ -15,7 +15,7 @@ import {
 } from 'react-native-gifted-chat'
 
 import CustomBalloon from '../components/CustomBalloon'
-import CustomActions from '../actions/CustomActions'
+import CustomActions from '../../actions/CustomActions'
 
 export default class MatchingScreen extends React.Component {
 
@@ -52,7 +52,7 @@ export default class MatchingScreen extends React.Component {
         this._isMounted = true
         this.setState(() => {
             return {
-                messages: require('../assets/data/messages.js'),
+                messages: require('../../assets/data/messages.js'),
             }
         })
     }
@@ -72,7 +72,7 @@ export default class MatchingScreen extends React.Component {
             if (this._isMounted === true) {
                 this.setState((previousState) => {
                     return {
-                        messages: GiftedChat.prepend(previousState.messages, require('../assets/data/old_messages.js')),
+                        messages: GiftedChat.prepend(previousState.messages, require('../../assets/data/old_messages.js')),
                         loadEarlier: false,
                         isLoadingEarlier: false,
                     }
