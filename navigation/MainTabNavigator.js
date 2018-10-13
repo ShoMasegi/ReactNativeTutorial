@@ -1,10 +1,11 @@
 import React from 'react'
 import { Platform } from 'react-native'
-import { createStackNavigator, createBottomTabNavigator } from "react-navigation"
+import { createStackNavigator, createBottomTabNavigator, createSwitchNavigator } from "react-navigation"
 
 import TabBarIcon from '../views/components/TabBarIcon'
 import ConnectScreen from '../views/screens/ConnectScreen'
 import MatchingScreen from '../views/screens/MatchingScreen'
+import ChatScreen from '../views/screens/ChatScreen'
 import SettingsScreen from '../views/screens/SettingsScreen'
 
 const ConnectStack = createStackNavigator({
@@ -27,16 +28,20 @@ ConnectStack.navigationOptions = {
 
 const MatchingStack = createStackNavigator({
     Matching: MatchingScreen,
+    Chat: ChatScreen,
 })
 
-MatchingStack.navigationOptions = {
-    tabBarLabel: 'マッチング',
-    tabBarIcon: ({ focused }) => (
-        <TabBarIcon
-            focused={focused}
-            name={Platform.OS === 'ios' ? `ios-chatbubbles${focused ? '' : '-outline'}` : 'md-chatbubbles'}
-        />
-    ),
+MatchingStack.navigationOptions = ({ navigation }) => {
+    return {
+        tabBarLabel: 'マッチング',
+        tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+                focused={focused}
+                name={Platform.OS === 'ios' ? `ios-chatbubbles${focused ? '' : '-outline'}` : 'md-chatbubbles'}
+            />
+        ),
+        tabBarVisible: !(navigation.state.index > 0),
+    }
 }
 
 const SettingsStack = createStackNavigator({
