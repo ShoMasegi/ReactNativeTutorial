@@ -6,18 +6,16 @@
 2. `npm install`
 3. `npm start`
 
-## swipe_cards branch
+## Screen
 
-`Android Pie (28)`、`iOS`ではうまく表示されますが、
-
-`Android Oreo (27)`ではレイアウトが崩れます。
-
-https://github.com/meteor-factory/react-native-tinder-swipe-cards
-
-## chat branch
-
-https://github.com/FaridSafi/react-native-gifted-chat
+| Deck Swipe | Chat |
+|:---:|:---:|
+|![](https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-ReactNative/connect.gif)|![](https://s3-ap-northeast-1.amazonaws.com/github.masegi/Tutorial-ReactNative/matching.gif)|
 
 ## 参考
 
 https://nativebase.io/
+
+https://github.com/alexbrillant/react-native-deck-swiper
+
+https://github.com/FaridSafi/react-native-gifted-chat
